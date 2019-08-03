@@ -1,0 +1,113 @@
+.appRoot{
+    text-align: center;
+}
+
+.calcularGrid{
+    display: inline-block;
+    margin-top: 80px;
+    max-width: 600px;
+    border: 1px solid #e3e3e3;
+    padding: 12px;
+    background: #e3e3e3;
+    border-radius: 5px;
+}
+
+.numbers{
+    width: 286px;
+    float: left;
+}
+
+.operators{
+    width: 75px;
+    float: right;
+}
+
+.button{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    outline: solid 1px #333;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.buttonNumber{
+    /* padding-top: 15px;
+    padding-bottom: 15px; */
+    width: 33.33%;
+    background-color: #ffa500;
+    height: 55px;
+    line-height: 55px;
+}
+
+.buttonOperator{
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    width: 100%;
+    background-color:#fad38c;
+    height: 44px;
+    line-height: 38px;
+}
+
+.displayHolder{
+    width: 350px;
+    padding: 20px 15px;
+}
+
+.ioCommonDisplay{
+    border: solid 1px #333;
+    border-radius: 3px;
+    background-color: #fff;
+    min-height: 100px;
+    width: 100%;
+    position: relative;
+}
+
+.ioCommonDisplayInput{
+    line-height: 50px;
+    margin: 0px 15px;
+    text-align: right;
+    font-size: 25px;
+}
+
+.ioCommonDisplayOutput{
+    line-height: 50px;
+    margin: 0px 15px;
+    text-align: right;
+    font-size: 28px;
+}
+
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.buttonOperator.ripple:hover {
+    background: #ffe4c7 radial-gradient(circle, transparent 1%, #ffe4c7 1%) center/15000%;
+}
+
+.buttonOperator.ripple:active {
+    background-color: #fff3e6;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+
+.buttonNumber.ripple:hover {
+    background: #ffbf00 radial-gradient(circle, transparent 1%, #ffbf00 1%) center/15000%;
+}
+
+.buttonNumber.ripple:active {
+    background-color: #ffe4c7;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+/* Blur out effect */
+.roll-out-blurred-left {
+	-webkit-animation: roll-out-blurred-left 0.65s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+	        animation: roll-out-blurred-left 0.65s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+}
