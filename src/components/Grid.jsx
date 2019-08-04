@@ -2,6 +2,8 @@ import React from 'react';
 import Button from './Button.jsx';
 import IOCommonDisplayComponent from './IOCommonDisplay';
 import Stack from '../utils/collections/Stack.js'
+import buttonCss from '../css/modules/button.module.css'
+import rippleCss from '../css/modules/effects/rippleEffect.module.css';
 
 export default class Grid extends React.Component{
     constructor(){
@@ -19,7 +21,8 @@ export default class Grid extends React.Component{
 
         this.manageInput = this.manageInput.bind(this);
         this.isThereAnOperatorInInput = this.isThereAnOperatorInInput.bind(this);
-
+        this.buttonClickHandler = this.buttonClickHandler.bind(this);
+        
         this.buttonType = {
             number: 0,
             operator: 1,
@@ -40,6 +43,7 @@ export default class Grid extends React.Component{
             {name :'.', type: this.buttonType.special},
             {name :'DEL', type: this.buttonType.control},
         ]
+
         this.operatorButtons = [
             {name:'+', type: this.buttonType.operator},
             {name:'-', type: this.buttonType.operator},
@@ -47,8 +51,6 @@ export default class Grid extends React.Component{
             {name:'/', type: this.buttonType.operator},
             {name:'=', type: this.buttonType.control},
         ]
-
-        this.buttonClickHandler = this.buttonClickHandler.bind(this);
     }
 
     isThereAnOperatorInInput(){
@@ -113,22 +115,24 @@ export default class Grid extends React.Component{
                 <div className="numbers" key={1}>
                     {
                         this.buttons.map(
-                            item => <Button buttonClass="button buttonNumber ripple" key={item.name}
-                                            val={item.name}
-                                            type={item.type}
-                                            clickActionHandler={this.buttonClickHandler}
-                                        ></Button>
+                        item => <Button buttonClass={`${buttonCss.button} ${buttonCss.buttonNumber} ${rippleCss.buttonNumber}`}
+                                    key={item.name}
+                                    val={item.name}
+                                    type={item.type}
+                                    clickActionHandler={this.buttonClickHandler}
+                                ></Button>
                         )
                     }
                 </div>
                 <div className="operators">
                     {
                         this.operatorButtons.map(
-                            item => <Button buttonClass="button buttonOperator ripple" key={item.name}
-                                            val={item.name}
-                                            type={item.type}
-                                            clickActionHandler={this.buttonClickHandler}
-                                        ></Button>
+                        item => <Button buttonClass={`${buttonCss.button} ${buttonCss.buttonOperator} ${rippleCss.buttonOperator}`}
+                                    key={item.name}
+                                    val={item.name}
+                                    type={item.type}
+                                    clickActionHandler={this.buttonClickHandler}
+                                ></Button>
                         )
                     }
                 </div>

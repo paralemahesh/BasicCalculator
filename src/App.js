@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import Grid from './components/Grid.jsx';
-import './calculator.css';
+import './css/calculator.css';
+import Calculator from './app/Calcaulator'
 
 function App() {
   return (
-    <div className="appRoot roll-out-blurred-left">
-      {/* <Calculator></Calculator> */}
-      <Grid></Grid>
+    <div className="appRoot">
+      <Calculator></Calculator>
     </div>
   );
 }

@@ -1,0 +1,30 @@
+
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.buttonOperator, .buttonNumber{
+    composes: ripple;
+}
+
+.buttonOperator:hover {
+    background: #ffe4c7 radial-gradient(circle, transparent 1%, #ffe4c7 1%) center/15000%;
+}
+
+.buttonOperator:active {
+    background-color: #fff3e6;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.buttonNumber:hover {
+    background: #ffbf00 radial-gradient(circle, transparent 1%, #ffbf00 1%) center/15000%;
+}
+
+.buttonNumber:active {
+    background-color: #ffe4c7;
+    background-size: 100%;
+    transition: background 0s;
+}

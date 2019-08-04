@@ -1,0 +1,34 @@
+.controlsBar{
+    background-color: #A9A9A9;
+    display:block;
+    min-height: 40px;
+    border-top: solid 1px #A9A9A9;
+    border-radius: 10px 10px 0px 0px;
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+.titleWrapper{
+    display: inline-block;
+    width: 80%;
+}
+
+.title{
+    text-align: left;
+    color: darkblue;
+}
+
+.controls{
+    display: inline-block;
+    width:20%;
+    text-align: right;
+}
+
+.control{
+    text-align: center;
+    width: 45px;
+    display: inline-block;
+    color: red;
+    line-height: 40px;
+    font-weight: 500;
+}

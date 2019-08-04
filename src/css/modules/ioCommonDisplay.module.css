@@ -1,0 +1,16 @@
+.commonDisplayComponent{
+    line-height: 50px;
+    margin: 0px 15px;
+    text-align: right;
+}
+
+.ioCommonDisplayInput{
+    composes: commonDisplayComponent;
+    font-size: 25px;
+}
+
+.ioCommonDisplayOutput{
+    composes: commonDisplayComponent;
+    font-size: 30px;
+    color: #333333;
+}
