@@ -12,6 +12,11 @@ class IOCommonDisplay extends React.Component{
     };
 }
 
+
+/* A react standard type variable is required that itself stores all react styled-css styles in it.
+ * This css is re-written inline by Radium! - This explodes the HTML rendered in the browser.
+ * Even media-queries are not supported in some browsers when processed by Radium.
+ */
 let css = {
     commonInput:{
         lineHeight: '50px',
