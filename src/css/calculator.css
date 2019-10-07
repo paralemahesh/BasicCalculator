@@ -1,0 +1,46 @@
+.appRoot{
+    text-align: center;
+}
+
+.calculator{
+    max-width: 600px;
+    margin-top: 80px;
+    display: inline-block;
+}
+
+.calcularGrid{
+    display: inline-block;
+    border: 1px solid #e3e3e3;
+    padding: 12px;
+    background: #e3e3e3;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.numbers{
+    width: 286px;
+    float: left;
+}
+
+.operators{
+    width: 75px;
+    float: right;
+}
+
+.displayHolder{
+    width: 350px;
+    padding: 20px 15px;
+}
+
+.ioCommonDisplay{
+    border: solid 1px #333;
+    border-radius: 3px;
+    background-color: #fff;
+    min-height: 100px;
+    width: 100%;
+    position: relative;
+}
+
+/* Blur out effect */
+.roll-out-blurred-left {
+    display: none;
+}

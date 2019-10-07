@@ -1,0 +1,25 @@
+
+.button{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    outline: solid 1px #333;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.buttonNumber{
+    width: 33.33%;
+    background-color: #ffa500;
+    height: 55px;
+    line-height: 55px;
+}
+
+.buttonOperator{
+    width: 100%;
+    background-color:#fad38c;
+    height: 44px;
+    line-height: 38px;
+}
