@@ -18,13 +18,14 @@ const styles = StyleSheet.create({
     }
 });
 
-export default class IOCommonDisplay extends React.Component{
-    render(){
-        return (
-            <div className="ioCommonDisplay">
-                <div className={css(styles.commonDisplayComponent, styles.ioCommonDisplayInput)}>{this.props.input}</div>
-                <div className={css(styles.commonDisplayComponent, styles.ioCommonDisplayOutput)}>{this.props.output}</div>
-            </div>
-        );
-    };
+const IOCommonDisplay = (props) => {
+    console.log("Display Updated")
+    return (
+        <div className="ioCommonDisplay">
+            <div className={css(styles.commonDisplayComponent, styles.ioCommonDisplayInput)}>{props.input}</div>
+            <div className={css(styles.commonDisplayComponent, styles.ioCommonDisplayOutput)}>{props.output}</div>
+        </div>
+    );
 }
+
+export default IOCommonDisplay;

@@ -1,6 +1,9 @@
 import React from 'react';
 import Grid from '../components/Grid'
 import Controls from '../components/Controls'
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { calculatorStateReducer } from '../helpers/reducers.js';
 
 export default class Caclulator extends React.Component{
     constructor(){
@@ -20,13 +23,15 @@ export default class Caclulator extends React.Component{
         if(this.state.isCalculatorOn){
             return (
                 <div className={this.state.isCalculatorOn ? "calculator" : "calculator roll-out-blurred-left"}>
-                    <Controls closeCalculator={this.handleCloseCalculator}></Controls>
-                    <Grid></Grid>
+                    <Provider store={createStore(calculatorStateReducer)}>
+                        <Controls closeCalculator={this.handleCloseCalculator}></Controls>
+                        <Grid></Grid>
+                    </Provider>
                 </div>
             )
         }
         else{
-            return <div>Hope I got it right ;)</div>
+            return <div>Agios amigo!</div>
         }
     }
 }
