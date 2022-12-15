@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Basic Calculator
+
+This is a web app created for making basic mathematic calculations.
 
 ## Available Scripts
 
